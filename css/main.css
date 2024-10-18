@@ -106,12 +106,23 @@ h3 {
     max-width: 550px;
 }
 
+.btn.create-account:hover{
+    background-color: #F97A7A;
+}
+
 .btn.sign-in{
     border: 2px solid #f7becf;
     color: #f7becf;
     background-color: transparent;
     max-width: 550px;
 }
+
+.btn.sign-in:hover{
+    background-color: #F97A7A;
+    color: #173387; 
+    border-color: #F97A7A;
+}
+
 
 .avatar {
     height: 80px;
