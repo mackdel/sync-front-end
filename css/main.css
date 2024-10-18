@@ -20,8 +20,9 @@
 
     --form-placer-font-color: #858D9D;      /* Font color for placer text in forms*/
     --form-font-color: #2B2F38;             /* Font color for user entered text in forms*/
+    --form-border-color: #3D4D65;           /* Border color for form options*/ 
 
-    --main-button-color: linear-gradient(180deg, #4169E1, #173387);
+    --main-button-color: linear-gradient(90deg, #4169E1, #173387);
     --main-button-hover-color: transparent;
 
     --like-button-color: linear-gradient(180deg, #FFA8C2, #F97A7A);
@@ -58,13 +59,11 @@ h3 {
 }
 
 .container {
-    text-align: center;
     width: 100%;
     padding: 20px;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     position: relative;
 }
 
@@ -76,11 +75,13 @@ h3 {
     border-radius: 99px;
     transition: 0.3s ease;
     font-size: 16px;
+    border: none;
 }
 
 
 /* || INDEX */
 .content{
+    text-align: center;
     justify-content: center;
     align-items: center;
     margin-top: 90px;
@@ -121,6 +122,62 @@ h3 {
     background-color: #F97A7A;
     color: #173387; 
     border-color: #F97A7A;
+}
+
+
+/* || REGISTER */
+.form-step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-step h2 {
+    font-size: 24px;
+    font-family: "Literata", serif;
+    color: var(--auth-heading-color);
+    font-weight: 600;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 16px 0px;
+    border: none;
+    border-top: 1px solid var(--form-border-color);
+    border-bottom: 1px solid var(--form-border-color);
+    font-size: 16px;
+    margin-top: 35px;
+    margin-bottom: 52px;
+    outline: none;
+    color: var(--form-font-color);
+}
+
+input[type="email"]::placeholder {
+    color: var(--form-placer-font-color);
+    font-size: 16px;
+}
+
+.btn.next{
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    background: var(--main-button-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+}
+
+.btn-prev-container{
+    
+}
+
+.btn.prev{
+    background: transparent;
+    color: #173387;
+    padding-left: 0px;
+    width: 50px;
+    height: 50px;
 }
 
 

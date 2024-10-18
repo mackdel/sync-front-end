@@ -15,37 +15,46 @@
     <div class="container">
         <!-- Step 1: Email -->
         <div class="form-step" id="step-1">
+            <div class="btn-prev-container">
+                <button type="button" class="btn prev" onclick="goToTitle()">Back</button>
+            </div>
             <h2>What's your email?</h2>
             <input type="email" id="email" placeholder="Email" required>
-            <button type="button" class="next-btn" onclick="nextStep(2)">Next</button>
+            <button type="button" class="btn next" onclick="nextStep(2)">></button>
         </div>
         
         <!-- Step 2: Birthday -->
         <div class="form-step" id="step-2" style="display:none;">
-            <button type="button" class="prev-btn" onclick="prevStep(1)">Back</button>
+            <div class="btn-prev-container">
+                <button type="button" class="btn prev" onclick="prevStep(1)">Back</button>
+            </div>
             <h2>When is your birthday?</h2>
             <input type="text" id="day" placeholder="DD" maxlength="2" required>
             <input type="text" id="month" placeholder="MM" maxlength="2" required>
             <input type="text" id="year" placeholder="YYYY" maxlength="4" required>
             <p>This cannot be changed later.</p>
-            <button type="button" class="next-btn" onclick="nextStep(3)">Next</button>
+            <button type="button" class="btn next" onclick="nextStep(3)">></button>
         </div>
 
         <!-- Step 3: Name -->
         <div class="form-step" id="step-3" style="display:none;">
-            <button type="button" class="prev-btn" onclick="prevStep(2)">Back</button>
+            <div class="btn-prev-container">
+                <button type="button" class="btn prev" onclick="prevStep(2)">Back</button>
+            </div>
             <h2>What is your name?</h2>
             <input type="text" id="firstname" placeholder="First Name" required>
             <input type="text" id="lastname" placeholder="Last Name">
-            <button type="button" class="next-btn" onclick="nextStep(4)">Next</button>
+            <button type="button" class="btn next" onclick="nextStep(4)">></button>
         </div>
 
         <!-- Step 4: Password & Submit -->
         <div class="form-step" id="step-4" style="display:none;">
-            <button type="button" class="prev-btn" onclick="prevStep(3)">Back</button>
+            <div class="btn-prev-container">
+                <button type="button" class="btn prev" onclick="prevStep(3)">Back</button>
+            </div>
             <h2>Enter a password.</h2>
             <input type="password" id="password" placeholder="Password" required>
-            <button type="submit" class="submit-btn">Submit</button>
+            <button type="submit" class="btn next">Submit</button>
         </div>
     </div>
 
