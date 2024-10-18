@@ -82,6 +82,11 @@ a{
     border: none;
 }
 
+.btn.main{
+    background: var(--main-button-color);
+    color: white;
+}
+
 
 /* || INDEX */
 .content{
@@ -207,8 +212,23 @@ input[type="email"] {
     text-align: center;
 }
 
+.name-inputs, .password-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    margin-bottom: 52px;
+}
 
-
+.name-inputs input, .password-inputs input {
+    width: 100%;
+    padding: 16px 0px;
+    border: none;
+    border-top: 1px solid var(--form-border-color);
+    border-bottom: 1px solid var(--form-border-color);
+    font-size: 16px;
+    outline: none;
+    color: var(--form-font-color);
+}
 
 .avatar {
     height: 80px;

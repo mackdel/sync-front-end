@@ -44,8 +44,11 @@
                 <button type="button" class="btn prev" onclick="prevStep(2)">Back</button>
             </div>
             <h2>What is your name?</h2>
-            <input type="text" id="firstname" placeholder="First Name" required>
-            <input type="text" id="lastname" placeholder="Last Name">
+            <div class="name-inputs">
+                <input type="text" id="firstname" placeholder="First Name (Required)" required>
+                <input type="text" id="lastname" placeholder="Last Name">
+            </div>
+            <p class="info-text">This is your display name.</p>
             <button type="button" class="btn next" onclick="nextStep(4)">></button>
         </div>
 
@@ -55,8 +58,10 @@
                 <button type="button" class="btn prev" onclick="prevStep(3)">Back</button>
             </div>
             <h2>Enter a password.</h2>
-            <input type="password" id="password" placeholder="Password" required>
-            <input type="password" id="password" placeholder="Confirm Password" required>
+            <div class="password-inputs">
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirm-password" placeholder="Confirm Password">
+            </div>
             <button type="submit" class="btn main">Submit</button>
         </div>
     </div>
