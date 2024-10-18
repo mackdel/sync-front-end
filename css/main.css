@@ -58,6 +58,10 @@ h3 {
     font-weight: 600;
 }
 
+a{
+    text-decoration: none;
+}
+
 .container {
     width: 100%;
     padding: 20px;
@@ -140,20 +144,7 @@ h3 {
     font-weight: 600;
 }
 
-input[type="email"] {
-    width: 100%;
-    padding: 16px 0px;
-    border: none;
-    border-top: 1px solid var(--form-border-color);
-    border-bottom: 1px solid var(--form-border-color);
-    font-size: 16px;
-    margin-top: 35px;
-    margin-bottom: 52px;
-    outline: none;
-    color: var(--form-font-color);
-}
-
-input[type="email"]::placeholder {
+input::placeholder {
     color: var(--form-placer-font-color);
     font-size: 16px;
 }
@@ -181,6 +172,42 @@ input[type="email"]::placeholder {
     height: 50px;
     margin-left: 0;
 }
+
+input[type="email"] {
+    width: 100%;
+    padding: 16px 0px;
+    border: none;
+    border-top: 1px solid var(--form-border-color);
+    border-bottom: 1px solid var(--form-border-color);
+    font-size: 16px;
+    margin-top: 35px;
+    margin-bottom: 52px;
+    outline: none;
+    color: var(--form-font-color);
+}
+
+.birthday-inputs {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto; 
+    border-top: 1px solid var(--form-border-color);
+    border-bottom: 1px solid var(--form-border-color);
+    margin-top: 35px;
+    margin-bottom: 52px;
+}
+
+
+.birthday-inputs input {
+    width: 60px;
+    padding: 16px 0px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    color: var(--form-font-color);
+    text-align: center;
+}
+
+
 
 
 .avatar {
