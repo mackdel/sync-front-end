@@ -46,7 +46,7 @@ body {
     display: flex;
     justify-content: center;
     color: var(--main-font-color);
-    font-size: 1rem;
+    font-size: 16px;
     text-align: left;
     overflow-x: hidden;
     max-height: 100vh;
@@ -75,6 +75,7 @@ h3 {
     margin: 10px auto;
     border-radius: 99px;
     transition: 0.3s ease;
+    font-size: 16px;
 }
 
 
@@ -99,15 +100,17 @@ h3 {
 }
 
 .btn.create-account{
-    background-color: #FFEEF2;
+    background-color: #f7becf;
     border: none;
     color: #173387; 
+    max-width: 550px;
 }
 
 .btn.sign-in{
-    border: 2px solid #FFEEF2;
-    color: #FFEEF2;
+    border: 2px solid #f7becf;
+    color: #f7becf;
     background-color: transparent;
+    max-width: 550px;
 }
 
 .avatar {
