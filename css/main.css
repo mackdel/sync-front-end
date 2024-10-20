@@ -249,12 +249,63 @@ input{
     border-bottom: 1px solid var(--form-border-color);
 }
 
-
-
-
-
 .avatar {
     height: 80px;
     width: 80px;
     border-radius: 100px;
+}
+
+/* || PROFILE */
+.profile-container {
+    height: 100vh;
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profile-buttons {
+    margin: 90px 0 20px 0;
+}
+
+.profile-logo img {
+    height: 200px;
+    margin: 20px 0;
+}
+
+.profile-btn {
+    background-color: #4169E1;
+    color: white;
+    padding: 14px 16px;
+    border-radius: 99px;
+    transition: 0.3s ease;
+    width: 100%;
+}
+
+.profile-btn:hover {
+    background-color: #173387;
+}
+
+.profile-pic-container {
+    margin-bottom: 15px;
+}
+
+.profile-pic-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Makes the label bold */
+}
+
+.profile-pic-container input[type="file"] {
+    padding: 5px; /* Padding for the file input */
+    border: 1px solid #ccc; /* Border for the file input */
+    border-radius: 5px; /* Rounded corners for the file input */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Ensures padding is included in width */
 }
