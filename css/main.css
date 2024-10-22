@@ -256,12 +256,17 @@ input{
 }
 
 /* || PROFILE */
+/* Add this to your main.css */
 .profile-container {
-    height: 100vh;
-    width: 100%;
-    max-width: 550px;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    min-height: 100vh; /* Ensures the container takes the full height */
+    padding: 20px; /* Adjusts padding */
+    text-align: center; /* Centers text */
 }
+
 
 .profile-content {
     display: flex;
@@ -299,13 +304,20 @@ input{
 .profile-pic-container label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold; /* Makes the label bold */
+    font-weight: bold; 
 }
 
 .profile-pic-container input[type="file"] {
-    padding: 5px; /* Padding for the file input */
-    border: 1px solid #ccc; /* Border for the file input */
-    border-radius: 5px; /* Rounded corners for the file input */
-    width: 100%; /* Full width */
-    box-sizing: border-box; /* Ensures padding is included in width */
+    padding: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+#profile-picture {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 50%; 
 }

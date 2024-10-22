@@ -12,19 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div class="profile-container">
         <div class="content-main">
             <!-- Profile Page -->
             <div class="form-step" id="profile-page">
                 <h2>Your Profile</h2>
-                <div class="profile-info">
-                    <img id="profile-picture" src="../images/default-profile.png" alt="Profile Picture" class="profile-pic">
-                    <h3 id="user-name">John Doe</h3> <!-- Placeholder name -->
-                </div>
+                <img id="profile-picture" src="../images/default-profile.png" alt="Profile Picture" />
+                <h3 id="user-name">User Name</h3>
                 <div class="buttons">
-                    <button class="btn edit-profile" onclick="showPage('edit-profile-page')">Edit Profile</button>
-                    <button class="btn account-settings" onclick="showPage('account-settings-page')">Account Settings</button>
-                    <button class="btn logout" onclick="logout()">Logout</button>
+                    <button class="btn main" onclick="showPage('edit-profile-page')">Edit Profile</button>
+                    <button class="btn main" onclick="showPage('account-settings-page')">Account Settings</button>
+                    <button class="btn main" onclick="logout()">Logout</button>
                 </div>
                 <div class="logo">
                     <img src="../images/logo-text-img-whiteout.png" alt="Sync Logo">
@@ -38,11 +36,7 @@
                 </div>
                 <h2>Edit Profile</h2>
                 <div class="inputs-containers">
-                    <!-- New Profile Picture Input -->
-                    <div class="profile-pic-container">
-                        <label for="profile-pic">Upload Profile Picture:</label>
-                        <input type="file" id="profile-pic" accept="image/*" onchange="previewProfilePic(event)">
-                    </div>
+                    <input type="file" id="profile-upload" accept="image/*" onchange="previewProfilePicture(event)">
                     <input type="text" id="name" placeholder="Name" required>
                     <input type="text" id="bio" placeholder="Bio" required>
                     <input type="date" id="birthday" required>
@@ -75,7 +69,7 @@
                     <input type="password" id="new-password" placeholder="New Password" required>
                     <input type="password" id="confirm-new-password" placeholder="Confirm New Password" required>
                 </div>
-                <button type="button" class="btn main" onclick="saveChanges()">Save Changes</button>
+                <button type="button" class="btn main" onclick="showPage('profile-page')">Update Settings</button>
             </div>
         </div>
     </div>
@@ -97,55 +91,29 @@
             window.location.href = '../index.html';
         }
 
-        function previewProfilePic(event) {
+        function previewProfilePicture(event) {
             const file = event.target.files[0];
             const reader = new FileReader();
             reader.onload = function(e) {
-                document.getElementById('profile-picture').src = e.target.result;
+                const profilePicture = document.getElementById('profile-picture');
+                profilePicture.src = e.target.result; // Set the image source to the uploaded file
             }
-            if (file) {
-                reader.readAsDataURL(file);
-            }
+            reader.readAsDataURL(file);
         }
 
         function saveChanges() {
-
-
+            // Get the new name from the input field
             const name = document.getElementById('name').value;
-            const bio = document.getElementById('bio').value;
-            const birthday = document.getElementById('birthday').value;
-            const gender = document.getElementById('gender').value;
-            const role = document.getElementById('role').value;
-            const genres = document.getElementById('genres').value;
 
-            console.log('Profile Changes Saved:', { name, bio, birthday, gender, role, genres });
-
-            // Return to profile page
-            showPage('profile-page');
-
-            // Update displayed user name (you can also update the profile picture here if needed)
+            // Update the displayed name on the profile page
             document.getElementById('user-name').innerText = name;
+
+            // Optionally: Reset the input field after saving changes
+            document.getElementById('name').value = '';
+
+            // Show the profile page
+            showPage('profile-page');
         }
     </script>
-
-    <style>
-        .profile-info {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .profile-pic {
-            width: 80px; /* Adjust as needed */
-            height: 80px; /* Adjust as needed */
-            border-radius: 50%; /* Makes the image circular */
-            margin-right: 15px; /* Space between image and name */
-        }
-
-        #user-name {
-            font-size: 24px; /* Adjust as needed */
-            font-weight: bold; /* Makes the name bold */
-        }
-    </style>
 </body>
 </html>
